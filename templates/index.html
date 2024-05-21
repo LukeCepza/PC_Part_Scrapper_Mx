@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Options</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .component-row { display: flex; align-items: center; margin-bottom: 10px; }
+        .component-row > div { padding: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Best Options for Components</h1>
+        <h2>Total Price: {{ total_price }} MXN</h2>
+        <div class="mt-4">
+            {% for component, options in best_options.items() %}
+                <div class="component-row">
+                    <div class="col-md-2">{{ component }}</div>
+                    <div class="col-md-1">
+                        <a href="{{ url_for('update_index', component=component, direction='prev') }}" class="btn btn-secondary">◀</a>
+                        {{ current_indices[component] + 1 }}
+                        <a href="{{ url_for('update_index', component=component, direction='next') }}" class="btn btn-secondary">▶</a>
+                    </div>
+                    {% if options %}
+                        <div class="col-md-2">{{ options[0]['price'] }} MXN</div>
+                        <div class="col-md-5">{{ options[0]['full'] }}</div>
+                        <div class="col-md-2">
+                            <a href="{{ options[0]['link'] }}" class="btn btn-primary" target="_blank">View Product</a>
+                        </div>
+                    {% else %}
+                        <div class="col-md-9">No options available</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
