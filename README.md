@@ -38,11 +38,11 @@ To get started with PC Part Scrapper MX, follow these steps:
 To run the scrapper, use the following commands:
 
 ```sh
-python scrapper.py
+python main.py
 python app.py
 ```
 
-`scrapper.py` fetches the data from the internet. It may take a while, around 17 minutes.
+`main.py` fetches the data from the internet. It may take a while, around 17 minutes.
 
 `app.py` displays the information in a very basic web-based GUI to see the different options based on the cheapest options found.
 
