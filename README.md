@@ -1,4 +1,3 @@
-```markdown
 # PC Part Scrapper MX
 
 PC Part Scrapper MX is a tool designed to scrape data about PC components from various Mexican online stores. This project aims to provide users with up-to-date information on prices of PC parts based on a list of parts and search queries. I used this scrapper to build my own PC. Hope it could help someone! 
@@ -8,8 +7,6 @@ PC Part Scrapper MX is a tool designed to scrape data about PC components from v
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -48,15 +45,17 @@ To get started with PC Part Scrapper MX, follow these steps:
 
 To run the scrapper, use the following commands:
 
-```sh
-python scrapper.py
-python app.py
-```
+    ```sh
+    python scrapper.py
+    python app.py
+    ```
 scrapper.py fetches the data from internet. It may take a while, around 17 minutes.
 app.py displays the information in a very basic web based GUI to see the different options based on the cheapest options found.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
 
 For any questions or feedback, please contact [lkcepza@gmail.com](mailto:your-email@example.com).
 
-```
