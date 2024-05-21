@@ -1,5 +1,3 @@
-Sure! Here's a template for your README file that you can customize as needed:
-
 ```markdown
 # PC Part Scrapper MX
 
